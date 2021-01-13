@@ -51,6 +51,32 @@ const postRequest = (url, body) => {
   });
 };
 
+const putRequest = (url, body) => {
+  return request({
+    url,
+    method: "PUT",
+    crossDomain: true,
+    data: body,
+  });
+};
+
+const deleteRequest = (url) => {
+  return request({
+    url,
+    method: "DELETE",
+    crossDomain: true,
+  });
+};
+
+const patchRequest = (url, body) => {
+  return request({
+    url,
+    method: "PATCH",
+    crossDomain: true,
+    data: body,
+  });
+};
+
 postRequest("users/userID/meetings", {
   topic: "first test meeting",
   type: "2",
